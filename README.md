@@ -60,27 +60,18 @@ The repository demonstrates a complete machine learning workflow:
 
 ---
 
-## Repository Structure
+## Architecture
 
 ```
-titanic-survival-prediction/
-│
-├── 📊 train.csv
-│   ├── 891 rows
-│   ├── 12 features
-│   └── labeled (Survived column)
-│
-├── 📊 test.csv
-│   ├── 418 rows
-│   ├── 11 features
-│   └── unlabeled (for prediction)
-│
-├── 📄 gender_submission.csv
-│   └── sample submission file
-│
-└── 📓 titanic-survival-prediction.ipynb
-    ├── EDA · preprocessing · feature engineering
-    └── model training · evaluation · results
+```mermaid
+flowchart LR
+    A[Titanic Dataset] --> B[Preprocessing]
+    B --> C[Feature Engineering]
+    C --> D[Model Training]
+    D --> E[Hyperparameter Tuning]
+    E --> F[Evaluation]
+    F --> G[Survival Prediction]
+```
 ```
 
 ---
