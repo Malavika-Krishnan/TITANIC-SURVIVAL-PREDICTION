@@ -1,10 +1,59 @@
 # 🚢 Titanic Survival Prediction
 
-A machine learning project that predicts passenger survival on the Titanic using exploratory data analysis, feature engineering, and multiple classification models.
+A machine learning system for predicting passenger survival on the Titanic using classical ML models, structured feature engineering, and comprehensive model evaluation.
 
 ---
 
-## 📂 Project Structure
+## Overview
+
+The Titanic disaster remains one of history's most studied events in data science. This project explores how passenger attributes — such as age, gender, class, and fare — can be used to predict survival outcomes using classical machine learning.
+
+The repository demonstrates a complete machine learning workflow:
+
+- Exploratory Data Analysis
+- Data Preprocessing
+- Feature Engineering
+- Model Training
+- Hyperparameter Optimization
+- Cross-Validation
+- Performance Evaluation
+
+---
+
+## Architecture
+
+### Dataset Features
+
+| Feature | Description |
+|---|---|
+| `Pclass` | Passenger ticket class (1st, 2nd, 3rd) |
+| `Sex` | Gender of the passenger |
+| `Age` | Age in years |
+| `SibSp` | Number of siblings / spouses aboard |
+| `Parch` | Number of parents / children aboard |
+| `Fare` | Ticket fare paid |
+| `Embarked` | Port of embarkation (C, Q, S) |
+| `Cabin` | Cabin number (heavily missing) |
+| `Survived` | Target label — 0 = No, 1 = Yes |
+
+### Models Used
+
+| Model | Purpose |
+|---|---|
+| Linear Regression | Regression baseline |
+| Ridge Regression | Regularized regression baseline |
+| XGBoost Classifier | Main predictive model |
+| Random Forest Classifier | Ensemble predictive model |
+| GridSearchCV | Hyperparameter optimization |
+| K-Fold Cross Validation | Model validation |
+
+### Tech Stack
+
+`Python` · `Scikit-learn` · `XGBoost` · `Pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `Plotly` · `Jupyter Notebook`
+
+---
+
+## Repository Structure
 
 ```
 titanic-survival-prediction/
@@ -13,122 +62,57 @@ titanic-survival-prediction/
 ├── 📊 test.csv                           →  418 rows · 11 features · unlabeled
 ├── 📄 gender_submission.csv              →  sample submission file
 └── 📓 titanic-survival-prediction.ipynb  →  EDA · preprocessing · modeling
+```
 
 ---
 
-## 📊 Dataset Overview
+## Installation
 
-| Dataset | Rows | Columns |
-|---------|------|---------|
-| train.csv | 891 | 12 |
-| test.csv | 418 | 11 |
-
-**Features:**
-
-| Column | Description |
-|--------|-------------|
-| `PassengerId` | Unique passenger identifier |
-| `Survived` | Target — 0 = No, 1 = Yes |
-| `Pclass` | Ticket class (1st, 2nd, 3rd) |
-| `Name` | Passenger name |
-| `Sex` | Gender |
-| `Age` | Age in years |
-| `SibSp` | Number of siblings/spouses aboard |
-| `Parch` | Number of parents/children aboard |
-| `Ticket` | Ticket number |
-| `Fare` | Passenger fare |
-| `Cabin` | Cabin number |
-| `Embarked` | Port of embarkation (C, Q, S) |
-
-**Missing Values (Training Set):**
-- `Cabin` — 687 missing (77%)
-- `Age` — 177 missing (20%)
-- `Embarked` — 2 missing
-
----
-
-## 🔍 Exploratory Data Analysis
-
-- **Survival rate:** 38.4% survived (342 out of 891)
-- **Gender:** Females had a 74.2% survival rate vs. 18.9% for males
-- **Passenger class:** Higher-class passengers had significantly better survival odds
-- **Age groups:** Survival rates analyzed across age bins (Infants → Old)
-- **Correlation heatmap** used to visualize relationships between numeric features
-
----
-
-## ⚙️ Data Preprocessing
-
-- Dropped `Cabin` column (too many missing values)
-- Imputed missing `Age` values using iterative/KNN imputation
-- Filled missing `Embarked` with mode
-- Encoded categorical features (`Sex`, `Embarked`, `AgeGroup`) using `LabelEncoder`
-- Created age group buckets: Infants, Toddlers, Kids, Teens, Youngs, Middle Aged, Old
-
----
-
-## 🤖 Models Used
-
-### 1. Linear Regression (baseline)
-- Features: `Pclass`, `Age`, `Fare`
-- Used as a regression baseline
-
-### 2. Ridge Regression
-- Features: `Pclass`, `Age`, `Fare`
-- Evaluated using RMSE
-
-### 3. XGBoost Classifier
-- Wrapped in a `Pipeline` with `MinMaxScaler`
-- Hyperparameter tuning via `GridSearchCV` (5-fold CV)
-- Parameters tuned: `n_estimators`, `learning_rate`
-
-### 4. Random Forest Classifier
-- Wrapped in a `Pipeline` with `MinMaxScaler`
-- Hyperparameter tuning via `GridSearchCV` (5-fold CV)
-- Parameters tuned: `n_estimators`, `max_depth`
-
-**Evaluation Metrics:** Accuracy, F1 Score, Precision, Confusion Matrix
-
----
-
-## 🛠️ Libraries & Tools
-
-| Library | Purpose |
-|---------|---------|
-| `pandas`, `numpy` | Data manipulation and computation |
-| `scipy` | Statistical analysis |
-| `matplotlib`, `seaborn`, `plotly` | Data visualization |
-| `scikit-learn` | Preprocessing, modeling, evaluation |
-| `xgboost` | Gradient boosting classifier |
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
+**Clone the repository**
 ```bash
 git clone https://github.com/your-username/titanic-survival-prediction.git
 cd titanic-survival-prediction
 ```
 
-### 2. Install dependencies
+**Install dependencies**
 ```bash
-pip install pandas numpy scipy matplotlib seaborn plotly scikit-learn xgboost
+pip install pandas numpy scipy matplotlib seaborn plotly scikit-learn xgboost jupyter
 ```
 
-### 3. Launch the notebook
+**Run the notebook**
 ```bash
 jupyter notebook titanic-survival-prediction.ipynb
 ```
 
 ---
 
-## 📁 Data Source
+## Key Features
 
-The dataset is from the [Kaggle Titanic Competition](https://www.kaggle.com/competitions/titanic).
+- Binary survival classification from passenger metadata
+- Age group binning and feature engineering
+- Correlation heatmaps and survival distribution visualizations
+- Feature importance analysis via Random Forest
+- Cross-validation evaluation
+- Hyperparameter optimization with GridSearchCV
 
 ---
 
-## 📜 License
+## Future Scope
+
+- Integration with larger historical passenger datasets
+- Deep learning-based classification (MLP, TabNet)
+- Interactive survival prediction dashboard
+- Advanced ensemble and stacking methods
+- SHAP-based model interpretability
+
+---
+
+## Data Source
+
+Dataset from the [Kaggle Titanic Competition](https://www.kaggle.com/competitions/titanic).
+
+---
+
+## License
 
 This project is open-source and available under the [MIT License](LICENSE).
