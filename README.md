@@ -77,6 +77,7 @@ titanic-survival-prediction/
     ├── Feature Engineering
     ├── Model Training
     └── Evaluation & Results
+```
 
 ---
 
@@ -118,6 +119,12 @@ jupyter notebook titanic-survival-prediction.ipynb
 - Interactive survival prediction dashboard
 - Advanced ensemble and stacking methods
 - SHAP-based model interpretability
+
+---
+
+## Data Source
+
+Dataset from the [Kaggle Titanic Competition](https://www.kaggle.com/competitions/titanic).
 
 ---
 
