@@ -58,11 +58,25 @@ The repository demonstrates a complete machine learning workflow:
 ```
 titanic-survival-prediction/
 │
-├── 📊 train.csv                          →  891 rows · 12 features · labeled
-├── 📊 test.csv                           →  418 rows · 11 features · unlabeled
-├── 📄 gender_submission.csv              →  sample submission file
-└── 📓 titanic-survival-prediction.ipynb  →  EDA · preprocessing · modeling
-```
+├── 📊 train.csv
+│   ├── 891 rows
+│   ├── 12 features
+│   └── labeled (Survived column)
+│
+├── 📊 test.csv
+│   ├── 418 rows
+│   ├── 11 features
+│   └── unlabeled (for prediction)
+│
+├── 📄 gender_submission.csv
+│   └── sample submission file
+│
+└── 📓 titanic-survival-prediction.ipynb
+    ├── Exploratory Data Analysis
+    ├── Data Preprocessing
+    ├── Feature Engineering
+    ├── Model Training
+    └── Evaluation & Results
 
 ---
 
@@ -104,12 +118,6 @@ jupyter notebook titanic-survival-prediction.ipynb
 - Interactive survival prediction dashboard
 - Advanced ensemble and stacking methods
 - SHAP-based model interpretability
-
----
-
-## Data Source
-
-Dataset from the [Kaggle Titanic Competition](https://www.kaggle.com/competitions/titanic).
 
 ---
 
