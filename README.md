@@ -9,11 +9,10 @@ A machine learning project that predicts passenger survival on the Titanic using
 ```
 titanic-survival-prediction/
 │
-├── train.csv                          # Training dataset (891 passengers)
-├── test.csv                           # Test dataset (418 passengers)
-├── gender_submission.csv              # Sample submission file
-└── titanic-survival-prediction.ipynb  # Main notebook
-```
+├── 📊 train.csv                          →  891 rows · 12 features · labeled
+├── 📊 test.csv                           →  418 rows · 11 features · unlabeled
+├── 📄 gender_submission.csv              →  sample submission file
+└── 📓 titanic-survival-prediction.ipynb  →  EDA · preprocessing · modeling
 
 ---
 
