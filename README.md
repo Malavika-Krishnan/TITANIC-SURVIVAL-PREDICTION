@@ -1,5 +1,12 @@
 # 🚢 Titanic Survival Prediction
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-3.10+-111111?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scikit--Learn-ML-111111?style=flat-square&logo=scikitlearn&logoColor=white" />
+  <img src="https://img.shields.io/badge/Qiskit-Quantum-111111?style=flat-square&logo=qiskit&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-111111?style=flat-square" />
+</p>
+
 A machine learning system for predicting passenger survival on the Titanic using classical ML models, structured feature engineering, and comprehensive model evaluation.
 
 ---
