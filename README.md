@@ -62,9 +62,8 @@ The repository demonstrates a complete machine learning workflow:
 
 ## Architecture
 
-```
 ```mermaid
-flowchart LR
+   flowchart LR
     A[Titanic Dataset] --> B[Preprocessing]
     B --> C[Feature Engineering]
     C --> D[Model Training]
@@ -72,7 +71,7 @@ flowchart LR
     E --> F[Evaluation]
     F --> G[Survival Prediction]
 ```
-```
+
 
 ---
 
