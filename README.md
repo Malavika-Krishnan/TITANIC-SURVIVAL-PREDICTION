@@ -116,12 +116,6 @@ jupyter notebook titanic-survival-prediction.ipynb
 
 ---
 
-## Data Source
-
-Dataset from the [Kaggle Titanic Competition](https://www.kaggle.com/competitions/titanic).
-
----
-
 ## License
 
 This project is open-source and available under the [MIT License](LICENSE).
